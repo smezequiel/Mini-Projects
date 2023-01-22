@@ -1,0 +1,106 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;  /*sin esto estaria mas alejado de la pantalla */
+    padding: 0; /*botones mas chiquitos */
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;    /*esto es lo que lo centra */
+
+}
+
+/*esto se ponia para modificar una clase */
+.wrapper {  /*esta clase wrapper es la que incluye todo el body */
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;  /* esto agrando hacia la derecha */
+    height: 540px;
+    padding: 20px 35px;
+
+}
+
+.screen { /* este es solamente donde esta el 0 */
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255,255,255,0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;  /*esto hace que el box sea mas grande */
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row{ /* usamos este porque separa grupitos de 3*/
+    display: flex;  /* bien pegaditos */
+    justify-content: space-between; /*los separa */
+    margin: 5% 0;   /*los separa pero con sus margenes arriba */
+
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1) ;
+    color: #232323;
+    flex-basis: 20%; /* le expandio los botoncitos */
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;   /* le dio la altura correcta para que parezca bien una calculador */
+
+}
+
+.calc-button:last-child {   /* hace referencia al ultimo hijo de la clase */
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1) ;
+    color: #fff;
+    background: #d72880;
+}
+
+.calc-button:last-child:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+.calc-button:hover {
+    background-color: inherit;
+}
+
+.calc-button:active {
+    background-color: #ffef78;
+}
+
+.triple {
+    flex-basis: 73%;    /*volvio a expandir el botoncito del cero */
+}
